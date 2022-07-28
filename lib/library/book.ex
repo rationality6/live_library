@@ -5,6 +5,7 @@ defmodule Library.Book do
   schema "books" do
     field :author, :string
     field :name, :string
+    field :image, :string
 
     timestamps()
   end
