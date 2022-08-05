@@ -17,8 +17,8 @@ defmodule LibraryWeb.Router do
   scope "/", LibraryWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    live "/moons", MoonLive.Index
+    live "/", LiveBooks.Index
+    live "/books", LiveBooks.Index
 
   end
 
