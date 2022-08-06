@@ -18,7 +18,8 @@ defmodule LibraryWeb.Router do
     pipe_through :browser
 
     live "/", LiveBooks.Index
-    live "/books", LiveBooks.Index
+    live "/book_shelf", LiveBooks.Index
+    live "/rents", Rents.Index
 
   end
 
