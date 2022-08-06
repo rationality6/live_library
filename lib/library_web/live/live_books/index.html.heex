@@ -1,0 +1,5 @@
+<div class="grid-layout mt-2">
+  <%= for book <- @list_books do %>
+  <.live_component module={BookComponent} id={book.id} book={book} />
+  <% end %>
+</div>

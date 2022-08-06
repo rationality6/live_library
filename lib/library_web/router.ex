@@ -17,16 +17,9 @@ defmodule LibraryWeb.Router do
   scope "/", LibraryWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/ecto_test", PageController, :ecto_test
-
-    # cards
-    live "/cards", CardLive.Index, :index
-    live "/cards/new", CardLive.Index, :new
-    live "/cards/:id/edit", CardLive.Index, :edit
-
-    live "/cards/:id", CardLive.Show, :show
-    live "/cards/:id/show/edit", CardLive.Show, :edit
+    live "/", LiveBooks.Index
+    live "/book_shelf", LiveBooks.Index
+    live "/rents", Rents.Index
 
   end
 
