@@ -6,6 +6,7 @@ defmodule Library.Books.Book do
     field :author, :string
     field :name, :string
     field :image, :string
+    field :stock, :integer
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule Library.Books.Book do
   @doc false
   def changeset(book, attrs) do
     book
-    |> cast(attrs, [:name, :author])
-    |> validate_required([:name, :author])
+    |> cast(attrs, [:name, :author, :image, :stock])
+    |> validate_required([:name, :author, :image, :stock])
   end
 end
